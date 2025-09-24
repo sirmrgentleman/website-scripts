@@ -11,7 +11,7 @@
 
 # Get the boilerplate file location (one level up)
 read -p "Enter the directory you would like to use as a complete or relative path." working_directory
-cd $working_directory
+cd $working_directory || { echo "Directory is not valid! Exiting."; exit 1; }
 echo "Working directory is $PWD"
 BOILERPLATE="./boilerplate.html"
 
